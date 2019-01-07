@@ -1,0 +1,4 @@
+<structure name="humanTaskList">
+    <structure definition="nabu.cms.humanTask.rest.humanTask.humanTask" maxOccurs="unbounded" minOccurs="0" name="humanTasks"/>
+    <structure definition="nabu.services.jdbc.types.Page" minOccurs="0" name="page"/>
+</structure>

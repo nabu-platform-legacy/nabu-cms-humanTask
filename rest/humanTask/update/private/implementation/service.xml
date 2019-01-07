@@ -1,0 +1,202 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="664b2ef7-9098-4110-a876-4ef5a8e11c14">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="add37954-32a9-4304-b642-b2e4fbf59e4e">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="29e7817b-26f9-4516-9b8e-cdbd2284cad3"
+				serviceId="nabu.services.jdbc.Services.select"
+				resultName="result99ea26c014364178abf077fcc88f132c"
+				temporaryMapping="true"
+				x="133"
+				y="73"
+				invocationOrder="0"
+				asynchronous="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="b4fcc308-31c8-4508-9012-29bec310b576"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>nabu.cms.humanTask.types.emodel.humanTask.HumanTask</from>
+				<to>typeId</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="2f6d08dc-6361-42c7-bc53-3124a2ecf480"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/path/humanTaskId</from>
+				<to>instanceId</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="c75b6774-2e7e-4dad-bd5b-571a0fb3322e"
+				mask="true"
+				optional="false"
+				fixedValue="false">
+			<from>result99ea26c014364178abf077fcc88f132c/select/results[0]</from>
+			<to>node</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="fd3edde4-373e-4534-a5f3-b079def419b0"
+				mask="true"
+				optional="false"
+				fixedValue="false">
+			<from>result99ea26c014364178abf077fcc88f132c/select/results[0]</from>
+			<to>humanTask</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="2856fef9-e37d-4649-9cbb-3a93c9ef0e1d">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="8d6d411b-b537-4311-beae-75ce4f5ea820"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>input/content/name</from>
+			<to>node/name</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="9199f1f5-6d69-458a-80d5-816b6a4634ee"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>input/content/title</from>
+			<to>node/title</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="3116508d-8742-48a8-b2d8-5033eb6aecfb"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>input/content/description</from>
+			<to>node/description</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="5ffe71e9-0162-4163-ba29-4bfb09712800"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>input/content/correlationId</from>
+			<to>humanTask/correlationId</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="53f0816c-7c57-4b86-ae93-48c3a6557c5f"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>input/content/groupId</from>
+			<to>humanTask/groupId</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="57fd277b-2199-41c3-be50-5838f2abf9de"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>input/content/contextId</from>
+			<to>humanTask/contextId</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="6b0265f1-d148-4cf0-9e94-eef633609538"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>input/content/humanTaskTypeId</from>
+			<to>humanTask/humanTaskTypeId</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="57ed29ad-fb1a-4c7f-8b9e-674798cccba9"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>input/content/stateId</from>
+			<to>humanTask/stateId</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="b77cdf66-5d72-4169-930f-696e225bc173"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>input/content/assignedToId</from>
+			<to>humanTask/assignedToId</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="05d25d41-17a1-4f95-8734-5a778f5f3114"
+				serviceId="nabu.utils.Date.now"
+				resultName="result2087b68679c3435fb6f815fa33001ea2"
+				temporaryMapping="true"
+				x="357"
+				y="42"
+				invocationOrder="0"
+				asynchronous="false">
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="b5538298-cbca-4497-a7ce-8ae37c4b089b"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>result2087b68679c3435fb6f815fa33001ea2/date</from>
+			<to>node/modified</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="867af355-59ba-4ef2-bf0b-f1e0fdb1b06a"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>result2087b68679c3435fb6f815fa33001ea2/date</from>
+			<to>humanTask/modified</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="7e019f2a-8fe1-4ccf-a605-f6df966e461a">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="fd86b4ed-f05c-4324-97ee-4fa770a47fb7"
+				serviceId="nabu.services.jdbc.Services.update"
+				resultName="result2d705effbdd84e53aab83bf8d8cc50d9"
+				temporaryMapping="true"
+				x="60"
+				y="59"
+				invocationOrder="0"
+				asynchronous="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="1bce43ce-d67b-460f-aee3-a524d2767dff"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>humanTask</from>
+				<to>instances[0]</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="7d327943-2b90-4ae0-9805-09f573792031"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>node</from>
+				<to>instances[0]</to>
+			</steps>
+		</steps>
+	</steps>
+</sequence>

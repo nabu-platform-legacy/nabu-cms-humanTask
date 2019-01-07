@@ -1,0 +1,11 @@
+<jdbcService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<sql>select *
+from ~human_tasks ht join nodes n on ht.id = n.id
+where (:correlationId is null or ht.correlation_id = :correlationId)
+	and (:contextId is null or ht.context_id = :contextId)
+	and (:groupId is null or ht.group_id = :groupId)
+	and (:humanTaskTypeId is null or ht.human_task_type_id = any(:humanTaskTypeId))
+	and (:stateId is null or ht.state_id = any(:stateId))
+	and n.enabled = true</sql>
+	<outputDefinition>nabu.cms.humanTask.types.emodel.humanTask.HumanTask</outputDefinition>
+</jdbcService>

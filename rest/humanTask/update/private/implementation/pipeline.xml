@@ -1,0 +1,6 @@
+<structure interface="$self:api" name="pipeline">
+    <structure name="input" validate="true"/>
+    <structure name="output"/>
+    <structure collectionName="Nodes" definition="nabu.cms.core.types.model.core.Node" name="node" namespace="nabu.cms.core.types.model.core"/>
+    <structure collectionName="HumanTasks" definition="nabu.cms.humanTask.types.model.humanTask.HumanTask" name="humanTask" namespace="nabu.cms.humanTask.types.model.humanTask"/>
+</structure>

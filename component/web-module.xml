@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<webModule>
+    <path>/</path>
+    <webFragments>nabu.cms.humanTask.rest.humanTask.list</webFragments>
+    <webFragments>nabu.cms.humanTask.rest.humanTask.update</webFragments>
+</webModule>

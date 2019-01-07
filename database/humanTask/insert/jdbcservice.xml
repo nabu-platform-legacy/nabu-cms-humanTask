@@ -1,0 +1,25 @@
+<jdbcService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<sql>insert into ~human_tasks (
+	id,
+	created,
+	modified,
+	correlation_id,
+	group_id,
+	context_id,
+	human_task_type_id,
+	state_id,
+	assigned_to_id
+) values (
+	:id,
+	:created,
+	:modified,
+	:correlationId,
+	:groupId,
+	:contextId,
+	:humanTaskTypeId,
+	:stateId,
+	:assignedToId
+)</sql>
+	<generatedColumn>task_index</generatedColumn>
+	<inputDefinition>nabu.cms.humanTask.types.model.humanTask.HumanTask</inputDefinition>
+</jdbcService>
