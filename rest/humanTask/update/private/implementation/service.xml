@@ -52,6 +52,11 @@
 			<to>humanTask</to>
 		</steps>
 	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Throw"
+			disabled="false"
+			label="!node"
+			id="bf706494-c317-4a92-b32b-b4fe46a52701"
+			code="404" xsi:nil="true"/>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
 			id="2856fef9-e37d-4649-9cbb-3a93c9ef0e1d">
@@ -186,7 +191,7 @@
 					optional="false"
 					fixedValue="false">
 				<from>humanTask</from>
-				<to>instances[0]</to>
+				<to>instances[1]</to>
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 					disabled="false"
