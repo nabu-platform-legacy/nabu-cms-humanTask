@@ -1,0 +1,9 @@
+<structure collectionName="humanTasks" duplicate="id,created,modified" name="humanTask" superType="nabu.cms.core.types.model.core.Node">
+    <field minOccurs="0" name="correlationId" type="java.lang.String"/>
+    <field minOccurs="0" name="groupId" type="java.lang.String"/>
+    <field minOccurs="0" name="contextId" type="java.lang.String"/>
+    <field foreignKey="nabu.cms.core.types.model.core.MasterDataEntry:id" name="humanTaskTypeId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field foreignKey="nabu.cms.core.types.model.core.MasterDataEntry:id" name="stateId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field foreignKey="nabu.cms.core.types.model.core.User:id" minOccurs="0" name="assignedToId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field generated="true" name="taskIndex" type="java.lang.Long"/>
+</structure>
