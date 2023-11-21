@@ -4,7 +4,7 @@
     <createdField>created</createdField>
     <generateCollectionNames>true</generateCollectionNames>
     <generateFlatDocuments>true</generateFlatDocuments>
-    <imports>nabu.cms.core.types.emodel</imports>
+    <imports>nabu.cms.core.types.dataModel</imports>
     <inverseParentChildRelationship>false</inverseParentChildRelationship>
     <modifiedField>modified</modifiedField>
     <useExtensions>true</useExtensions>
